@@ -4,31 +4,19 @@ import Card from "./Card"
 
 function List(props) {
 
-  const people = peopleData.map(person => <Person key={person.id} name={person.name} /> );
-
-
-
-  const allCards = props.cards.map(function(card, id) {
-    return ( KEY????
-            <div className="card-title">{card.title}</div>
-            <div className="card-content">{card.content}</div>);
-
-  })
+  const allCards = props.cards.map(function(card, index) {
+    return (
+      <Card key={index} title={card.title} content={card.content} />
+    )}
+  );
 
   return (
     <section className="List">
-      <header> 
+      <header className="List-header"> 
         {props.header}
       </header>
       <div className="List-cards">
-      const allCards = props.cards.map(function(card, id) {
-        return ( KEY????
-            <div className="card-title">{card.title}</div>
-            <div className="card-content">{card.content}</div>);
-
-  })
-      j
-      
+        {allCards}
       </div>
     </section>
   );
